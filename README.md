@@ -2,9 +2,9 @@
 
 #Compiling Java Programs: 
 
-javac <FileName>.java
+javac HelloWorld.java
 
 #Running Java Programs
 
-java <FileName>
+java HelloWorld
 
