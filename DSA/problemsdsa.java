@@ -202,7 +202,38 @@ class Solution
 }
 
 
-8. 
+9.
+
+class Solution
+{
+    //Function to find the next greater element for each element of the array.
+    public static long[] nextLargerElement(long[] arr, int n)
+    { 
+        // Your code here
+        int j;
+        long[] ar = new long[n];
+        ar[n-1]=-1;
+        for(int i=0; i<arr.length-1; i++){
+            for(j=i+1;j<arr.length;j++){
+                if(arr[j]>arr[i]){
+                  ar[i]=arr[j];
+                  break;
+                }
+                else{
+                    continue;
+                }
+            }
+            if(j==arr.length){
+                ar[i]=-1;
+            }
+            
+        }
+        return ar;
+    } 
+}
+
+
+9. 
 
 class Solution
 {
@@ -227,7 +258,7 @@ class Solution
 }
 
 
-9. 
+10. 
 
 class Get {
     public static void reverseArray(int arr[], int n) {
@@ -244,7 +275,7 @@ class Get {
 }
 
 
-10.
+11.
 
 class Solution
 {
@@ -276,7 +307,7 @@ class Solution
 }
  
  
-11.
+12.
 
 class Solution
 {
@@ -300,7 +331,7 @@ class Solution
 }
 
 
-12.
+13.
 
 class Solution
 {
@@ -327,7 +358,7 @@ class Solution
     }
  
     
-13.
+14.
 
 class Solution {
     // Function to find element with more appearances between two elements in an
