@@ -166,7 +166,41 @@ class Solution{
 }
 
 
-7. 
+7.
+
+class Solution
+{
+    //Function to calculate the span of stockâ€™s price for all n days.
+    public static int[] calculateSpan(int price[], int n)
+    {
+        // Your code here
+        Stack<Integer> st = new Stack<>();
+        int count;
+        int arrnew[] = new int[n];
+        for(int i=n-1;i>=0;i--){
+            count=1;
+            int j;
+            for(j=0; j<i; j++){
+                if(price[j]<price[i])
+                  count+=1;
+                
+            }
+            
+            st.add(count);
+            
+            
+        }
+        
+       for(int i=0; i<n; i++){
+           arrnew[i]=st.pop();
+       }
+       return arrnew;
+    }
+    
+}
+
+
+8. 
 
 class Solution
 {
@@ -191,7 +225,7 @@ class Solution
 }
 
 
-8. 
+9. 
 
 class Get {
     public static void reverseArray(int arr[], int n) {
@@ -208,7 +242,7 @@ class Get {
 }
 
 
-9.
+10.
 
 class Solution
 {
@@ -240,7 +274,7 @@ class Solution
 }
  
  
-10.
+11.
 
 class Solution
 {
@@ -264,7 +298,7 @@ class Solution
 }
 
 
-11.
+12.
 
 class Solution
 {
@@ -291,7 +325,7 @@ class Solution
     }
  
     
-12.
+13.
 
 class Solution {
     // Function to find element with more appearances between two elements in an
