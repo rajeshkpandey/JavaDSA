@@ -139,7 +139,34 @@ class GetMin
 }
 
 
-6. 
+6.
+
+class Solution{
+        public static int profit(ArrayList<Integer> V)
+    {
+        //Your code here
+        int profit=0;
+        int j;
+        for(int i=0; i<V.size(); i++){
+            j=i+1;
+            while(j<V.size()&&V.get(j)<V.get(i)){
+                j++;
+                
+            }
+            if(j==V.size()){
+                profit+=V.get(i);
+            }
+            else{
+                profit+=(V.get(j)-V.get(i));
+            }
+            
+        }
+        return profit;
+    }
+}
+
+
+7. 
 
 class Solution
 {
@@ -164,7 +191,7 @@ class Solution
 }
 
 
-7. 
+8. 
 
 class Get {
     public static void reverseArray(int arr[], int n) {
@@ -181,7 +208,7 @@ class Get {
 }
 
 
-8.
+9.
 
 class Solution
 {
@@ -213,7 +240,7 @@ class Solution
 }
  
  
-9.
+10.
 
 class Solution
 {
@@ -237,7 +264,7 @@ class Solution
 }
 
 
-10.
+11.
 
 class Solution
 {
@@ -264,7 +291,7 @@ class Solution
     }
  
     
-11.
+12.
 
 class Solution {
     // Function to find element with more appearances between two elements in an
