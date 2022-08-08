@@ -107,7 +107,39 @@ class Solution
 }
 
 
-5. 
+5.
+
+class GetMin
+{
+    //Function to push all the elements into the stack.
+    public static Stack<Integer> _push(int arr[],int n)
+    {
+        // your code here
+        Stack<Integer> st = new Stack<>();
+        for (int i=0; i<arr.length; i++){
+            st.add(arr[i]);
+        }
+        return st;
+    }
+    
+    //Function to print minimum value in stack each time while popping.
+    static void _getMinAtPop(Stack<Integer>s)
+    {
+        // your code here
+        
+        for(int i=s.size()-1; i>=0; i--){
+            int min = Integer.MAX_VALUE;
+            for(int j=s.size()-1; j>=0; j--){
+              min=Math.min(min,s.elementAt(j));
+            }
+            System.out.print(min+ " ");
+            s.remove(s.size()-1);
+        }
+    }
+}
+
+
+6. 
 
 class Solution
 {
@@ -132,7 +164,7 @@ class Solution
 }
 
 
-6. 
+7. 
 
 class Get {
     public static void reverseArray(int arr[], int n) {
@@ -149,7 +181,7 @@ class Get {
 }
 
 
-7.
+8.
 
 class Solution
 {
@@ -181,7 +213,7 @@ class Solution
 }
  
  
-8.
+9.
 
 class Solution
 {
@@ -205,7 +237,7 @@ class Solution
 }
 
 
-9.
+10.
 
 class Solution
 {
@@ -232,7 +264,7 @@ class Solution
     }
  
     
-10.
+11.
 
 class Solution {
     // Function to find element with more appearances between two elements in an
