@@ -3,97 +3,61 @@
 
  1.
  
-class Solution
+ public static int minimum_vertical_sum(ArrayList<ArrayList<Integer>> arr)
 {
-    // Complete the function
-    public static int immediateSmaller(int arr[], int n, int x)
-    {
-        // your code here
-        int small=-1;
-        
-        for (int i = 0; i<n;i++)
-        {
-            if(arr[i]<x && arr[i]>small)
-            {
-               small=arr[i]; 
+    //Your code here
+    int sum;
+    int maxSum=Integer.MAX_VALUE;
+    int maxList=Integer.MIN_VALUE;
+    for(List<Integer> innerList:arr){
+        maxList=Math.max(maxList,innerList.size());
+    }
+    
+    for(int i=0; i<maxList; i++){
+        sum=0;
+        for(List<Integer> innerList :arr){
+            if(i<innerList.size()){
+                sum+=innerList.get(i);
             }
         }
-        
-        return small;
-        
+        maxSum= Math.min(maxSum,sum);
     }
+    return maxSum;
+    
 }
 
 
 2.
 
-class Solution
+public static int josephus(int n, int k)
 {
-    // Complete the function
-    public static int immediateGreater(int arr[], int n, int x)
+    //Your code here
+    LinkedList<Integer> list = new LinkedList<Integer>();
+    for(int i=0; i<n; i++)
     {
-        int big=Integer.MAX_VALUE;
-        // Your code here
-        for (int i=0;i<arr.length; i++)
-        {
-            if(arr[i]>x && big > arr[i])
-            {
-                big=arr[i];
-            }
-        }
-        
-        if (big == Integer.MAX_VALUE)
-        {
-          return -1;  
-        }
-        else
-          return big;
-        
+        list.add(i);
     }
- 
     
+    ListIterator<Integer> it = list.listIterator();
+    while(list.size()!=1){
+        for(int i=0; i<k; i++){
+            if(it.hasNext() == false){
+                it = list.listIterator();
+            }
+            it.next();
+        }
+        it.remove();
+    }
+    return list.get(0);
+}
+
+
 3.
 
-class Solution {
-    // Function to find element with more appearances between two elements in an
-    // array.
-    public int majorityWins(int arr[], int n, int x, int y) {
-        int countx=0;
-        int county=0;
-        for (int i = 0; i<arr.length; i++)
-        {
-            if(arr[i] == x)
-              countx+=1;
-            if(arr[i] == y)
-              county+=1;
-              
-        }
-        if (countx==county)
-          return x>y?y:x;
-        else 
-          return countx>county?x:y;
-    }
-}
 
 
-4. 
 
-class Get {
-    public static void reverseArray(int arr[], int n) {
-        // Your code here
-        int temp;
-        for(int i=0; i<arr.length/2; i++)
-        {
-            temp=arr[i];
-            arr[i]=arr[n-i-1];
-            arr[n-i-1]=temp;
-            
-        }
-    }
-}
-
-
-5.
+3. 
 
 class Solution
 {
@@ -118,8 +82,24 @@ class Solution
 }
 
 
-6.
+4. 
 
+class Get {
+    public static void reverseArray(int arr[], int n) {
+        // Your code here
+        int temp;
+        for(int i=0; i<arr.length/2; i++)
+        {
+            temp=arr[i];
+            arr[i]=arr[n-i-1];
+            arr[n-i-1]=temp;
+            
+        }
+    }
+}
+
+
+5.
 
 class Solution
 {
@@ -149,9 +129,84 @@ class Solution
          
     }
 }
+ 
+ 
+6.
+
+class Solution
+{
+    // Complete the function
+    public static int immediateSmaller(int arr[], int n, int x)
+    {
+        // your code here
+        int small=-1;
+        
+        for (int i = 0; i<n;i++)
+        {
+            if(arr[i]<x && arr[i]>small)
+            {
+               small=arr[i]; 
+            }
+        }
+        
+        return small;
+        
+    }
+}
 
 
 7.
+
+class Solution
+{
+    // Complete the function
+    public static int immediateGreater(int arr[], int n, int x)
+    {
+        int big=Integer.MAX_VALUE;
+        // Your code here
+        for (int i=0;i<arr.length; i++)
+        {
+            if(arr[i]>x && big > arr[i])
+            {
+                big=arr[i];
+            }
+        }
+        
+        if (big == Integer.MAX_VALUE)
+        {
+          return -1;  
+        }
+        else
+          return big;
+        
+    }
+ 
+    
+8.
+
+class Solution {
+    // Function to find element with more appearances between two elements in an
+    // array.
+    public int majorityWins(int arr[], int n, int x, int y) {
+        int countx=0;
+        int county=0;
+        for (int i = 0; i<arr.length; i++)
+        {
+            if(arr[i] == x)
+              countx+=1;
+            if(arr[i] == y)
+              county+=1;
+              
+        }
+        if (countx==county)
+          return x>y?y:x;
+        else 
+          return countx>county?x:y;
+    }
+}
+
+
+9.
 
 
 
