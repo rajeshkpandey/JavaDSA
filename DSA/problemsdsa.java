@@ -54,10 +54,60 @@ public static int josephus(int n, int k)
 
 3.
 
+public static Stack<Integer>_push(ArrayList<Integer> arr,int n)
+{
+       //Your code here
+       //Creating a Stack of type Integer
+        Stack<Integer>s = new Stack<>();
+        
+        //Pushing all the elements of the ArrayList
+        //to the Stack
+        for(int i=0;i<n;i++)
+        {
+            s.push(arr.get(i));
+        }
+        //returning the Stack
+        return s;
+    
+    
+}
+
+public static void _pop(Stack<Integer>s)
+{
+    //Your code here
+     while(!s.empty())
+        {
+            System.out.print(s.peek()+" ");
+            s.pop();
+        }
+    
+}
 
 
+4.
 
-3. 
+class Solution
+{
+    // Complete the function
+    // n: size of array
+    // arr[]: input array
+    public static void reverseArray(int n, int arr[])
+    {
+        // Reverse the array using stack
+        Stack<Integer> st = new Stack<>();
+        for(int i=0; i<arr.length;i++)
+        {
+            st.add(arr[i]);
+        }
+        for(int i=0; i<arr.length;i++)
+        {
+            arr[i]=st.pop();
+        }
+    }
+}
+
+
+5. 
 
 class Solution
 {
@@ -82,7 +132,7 @@ class Solution
 }
 
 
-4. 
+6. 
 
 class Get {
     public static void reverseArray(int arr[], int n) {
@@ -99,7 +149,7 @@ class Get {
 }
 
 
-5.
+7.
 
 class Solution
 {
@@ -131,7 +181,7 @@ class Solution
 }
  
  
-6.
+8.
 
 class Solution
 {
@@ -155,7 +205,7 @@ class Solution
 }
 
 
-7.
+9.
 
 class Solution
 {
@@ -182,7 +232,7 @@ class Solution
     }
  
     
-8.
+10.
 
 class Solution {
     // Function to find element with more appearances between two elements in an
@@ -206,7 +256,6 @@ class Solution {
 }
 
 
-9.
 
 
 
