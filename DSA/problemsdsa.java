@@ -181,8 +181,10 @@ class Solution
             count=1;
             int j;
             for(j=0; j<i; j++){
-                if(price[j]<price[i])
+                if(price[j]<=price[i])
                   count+=1;
+                else
+                  count=1;
                 
             }
             
