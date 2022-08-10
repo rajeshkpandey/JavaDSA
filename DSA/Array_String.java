@@ -1,5 +1,6 @@
 1.
   
+  //Finding if String is having unique characters
   boolean isUniqueChars(String str) { 
   if (str.length() > 128) return false; 
   boolean [] hash_at = new boolean[128];
@@ -15,6 +16,7 @@
 
 2.
   
+  //Finding two strings are permutations of one another
   boolean permutation(String s, String t) { 
   if(s.size()!=t.size()) return false;
   char [] c1 = s.toCharArray();
@@ -26,6 +28,7 @@
 
 3.
   
+  //Replacing the spaces with '02%'
   void replaceSpaces(char(J str, int trueLength) {
     int spacecount,index,i;
     for(i=0; i<str.size(); i++){
@@ -50,5 +53,16 @@
                      
 
 4.
-    
+ 
+ //Merging two arrays using ArrayList
+ Arraylist<String> merge(String[] words, String[] more) { 
+ Arraylist<String> sentence= new Arraylist<String>(); 
+ for (String w: words) sentence.add(w); 
+ for (String w: more) sentence.add(w); 
+ return sentence; 
+ }
+                     
+          
+5.
+          
    
